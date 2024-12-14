@@ -42,6 +42,13 @@ function displaySearchResults(keyword) {
         resultsFound = true;
     }
 
+    if (keyword.includes("country") || keyword.includes("countries")) {
+        travelData.countries.forEach(country => {
+            container.innerHTML += createCardHTML(country);
+        });
+        resultsFound = true;
+    }
+
     travelData.countries.forEach(country => {
         if (country.name.toLowerCase().includes(keyword)) {
             country.cities.forEach(city => {
@@ -65,6 +72,10 @@ function displaySearchResults(keyword) {
 }
 
 function createCardHTML(item) {
+    // Ensure that the `item` object has the expected fields (imageUrl, description, name)
+    const imageUrl = item.imageUrl || 'default_image.jpg'; // Use a default image if none provided
+    const description = item.description || 'No description available.';
+    
     return `
         <div class="card" style="
             border: 1px solid #ddd; 
@@ -75,7 +86,7 @@ function createCardHTML(item) {
             max-width: 300px;
             text-align: center;
         ">
-            <img src="${item.imageUrl}" alt="${item.name}" style="
+            <img src="${imageUrl}" alt="${item.name}" style="
                 width: 100%; 
                 height: 180px; 
                 object-fit: cover;
@@ -83,7 +94,7 @@ function createCardHTML(item) {
             <div style="padding: 15px;">
                 <h3 style="margin: 10px 0; font-size: 1.2rem; color: #333;">${item.name}</h3>
                 <p style="color: #555; font-size: 0.9rem; line-height: 1.4;">
-                    ${item.description}
+                    ${description}
                 </p>
                 <a href="#" style="
                     display: inline-block; 
