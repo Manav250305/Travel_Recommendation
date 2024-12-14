@@ -12,7 +12,7 @@
             font-family: Arial, sans-serif;
         }
         body {
-            background-image: url('background.jpg'); /* Replace with your image path */
+            background-image: url('background.jpg'); 
             background-size: cover;
             background-position: center;
             color: #fff;
@@ -115,7 +115,48 @@
         form button:hover {
             background-color: #45a049;
         }
+
+        .social-icons {
+    position: fixed; 
+    top: 50%; 
+    left: 10px; 
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    z-index: 1000; 
+}
+
+.social-icons a {
+    color: #ffffff; 
+    background: #333333; 
+    border-radius: 50%; 
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease; 
+    text-decoration: none; 
+}
+
+.social-icons a:hover {
+    background: #007bff; 
+    color: #ffffff; 
+    transform: scale(1.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+}
+
+.social-icons i {
+    font-size: 20px;
+    color: inherit; 
+}
+
+
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+
 </head>
 <body>
     <nav>
@@ -126,6 +167,12 @@
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </nav>
+    <div class="social-icons">
+    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+    </div>
 
     <section class="contact-section">
         <h1>Contact Us</h1>
