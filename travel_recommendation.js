@@ -1,15 +1,12 @@
-let travelData; // Global variable to hold fetched data
-
-// Fetch data from JSON file
-fetch('travel_recommendation_api.json') // Replace with your JSON file path
+let travelData; 
+fetch('travel_recommendation_api.json') 
     .then(response => response.json())
     .then(data => {
-        travelData = data; // Store fetched data globally
-        console.log("Fetched Data:", travelData); // Check if data is fetched
+        travelData = data; 
+        console.log("Fetched Data:", travelData); 
     })
     .catch(error => console.error('Error fetching data:', error));
 
-// Add event listener to the Search button
 document.getElementById('btnSearch').addEventListener('click', () => {
     const searchInput = document.getElementById('destination').value.trim().toLowerCase();
     if (!searchInput) {
@@ -19,21 +16,18 @@ document.getElementById('btnSearch').addEventListener('click', () => {
     displaySearchResults(searchInput);
 });
 
-// Add event listener to the Clear button
 document.getElementById('btnClear').addEventListener('click', () => {
     document.getElementById('destination').value = ''; // Clear input field
     const container = document.getElementById('recommendationContainer');
-    container.innerHTML = ''; // Clear search results
+    container.innerHTML = ''; 
 });
 
-// Function to display search results
 function displaySearchResults(keyword) {
     const container = document.getElementById('recommendationContainer');
-    container.innerHTML = ''; // Clear previous results
+    container.innerHTML = ''; 
 
     let resultsFound = false;
 
-    // Check for beaches
     if (keyword.includes("beach") || keyword.includes("beaches")) {
         travelData.beaches.forEach(beach => {
             container.innerHTML += createCardHTML(beach);
@@ -41,7 +35,6 @@ function displaySearchResults(keyword) {
         resultsFound = true;
     }
 
-    // Check for temples
     if (keyword.includes("temple") || keyword.includes("temples")) {
         travelData.temples.forEach(temple => {
             container.innerHTML += createCardHTML(temple);
@@ -49,7 +42,6 @@ function displaySearchResults(keyword) {
         resultsFound = true;
     }
 
-    // Check for countries and cities
     travelData.countries.forEach(country => {
         if (country.name.toLowerCase().includes(keyword)) {
             country.cities.forEach(city => {
@@ -65,7 +57,6 @@ function displaySearchResults(keyword) {
         });
     });
 
-    // If no results are found
     if (!resultsFound) {
         container.innerHTML = `<p style="text-align: center; font-size: 1.2rem; color: #777;">
             No results found for "${keyword}". Try a different keyword!
@@ -73,7 +64,6 @@ function displaySearchResults(keyword) {
     }
 }
 
-// Helper function to generate card HTML
 function createCardHTML(item) {
     return `
         <div class="card" style="
@@ -110,3 +100,19 @@ function createCardHTML(item) {
         </div>
     `;
 }
+
+function updateCityTime() {
+    const options = { 
+        timeZone: 'Asia/Kolkata', 
+        hour12: true, 
+        hour: 'numeric', 
+        minute: 'numeric', 
+        second: 'numeric' 
+    };
+    const kolkataTime = new Date().toLocaleTimeString('en-AU', options);
+    document.getElementById('cityTime').innerText = `Current time in Kolkata: ${kolkataTime}`;
+}
+
+setInterval(updateCityTime, 1000);
+
+updateCityTime();

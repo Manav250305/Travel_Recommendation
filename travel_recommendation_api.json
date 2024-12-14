@@ -3,48 +3,57 @@
       {
         "id": 1,
         "name": "Australia",
+        "timezone": "Australia/Sydney",
         "cities": [
           {
             "name": "Sydney, Australia",
             "imageUrl": "sydney.jpg",
-            "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge."
+            "description": "A vibrant city known for its iconic landmarks like the Sydney Opera House and Sydney Harbour Bridge.",
+            "timezone": "Australia/Sydney"
           },
           {
             "name": "Melbourne, Australia",
             "imageUrl": "melbourne.jpg",
-            "description": "A cultural hub famous for its art, food, and diverse neighborhoods."
+            "description": "A cultural hub famous for its art, food, and diverse neighborhoods.",
+            "timezone": "Australia/Melbourne"
           }
         ]
       },
       {
         "id": 2,
         "name": "Japan",
+        "timezone": "Asia/Tokyo",
         "cities": [
           {
             "name": "Tokyo, Japan",
             "imageUrl": "tokyo.jpg",
-            "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture."
+            "description": "A bustling metropolis blending tradition and modernity, famous for its cherry blossoms and rich culture.",
+            "timezone": "Asia/Tokyo"
           },
           {
             "name": "Kyoto, Japan",
             "imageUrl": "kyoto.jpg",
-            "description": "Known for its historic temples, gardens, and traditional tea houses."
+            "description": "Known for its historic temples, gardens, and traditional tea houses.",
+            "timezone": "Asia/Tokyo"
           }
         ]
       },
       {
         "id": 3,
         "name": "Brazil",
+        "timezone": "America/Sao_Paulo",
         "cities": [
           {
             "name": "Rio de Janeiro, Brazil",
             "imageUrl": "rio.jpg",
-            "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks."
+            "description": "A lively city known for its stunning beaches, vibrant carnival celebrations, and iconic landmarks.",
+            "timezone": "America/Sao_Paulo"
           },
           {
             "name": "São Paulo, Brazil",
             "imageUrl": "sao.jpg",
-            "description": "The financial hub with diverse culture, arts, and a vibrant nightlife."
+            "description": "The financial hub with diverse culture, arts, and a vibrant nightlife.",
+            "timezone": "America/Sao_Paulo"
           }
         ]
       }
@@ -54,13 +63,15 @@
         "id": 1,
         "name": "Angkor Wat, Cambodia",
         "imageUrl": "angkor.jpg",
-        "description": "A UNESCO World Heritage site and the largest religious monument in the world."
+        "description": "A UNESCO World Heritage site and the largest religious monument in the world.",
+        "timezone": "Asia/Phnom_Penh"
       },
       {
         "id": 2,
         "name": "Taj Mahal, India",
         "imageUrl": "taj.jpg",
-        "description": "An iconic symbol of love and a masterpiece of Mughal architecture."
+        "description": "An iconic symbol of love and a masterpiece of Mughal architecture.",
+        "timezone": "Asia/Kolkata"
       }
     ],
     "beaches": [
@@ -68,14 +79,15 @@
         "id": 1,
         "name": "Bora Bora, French Polynesia",
         "imageUrl": "bora.jpg",
-        "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows."
+        "description": "An island known for its stunning turquoise waters and luxurious overwater bungalows.",
+        "timezone": "Pacific/Tahiti"
       },
       {
         "id": 2,
         "name": "Copacabana Beach, Brazil",
         "imageUrl": "copacabana.jpg",
-        "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views."
+        "description": "A famous beach in Rio de Janeiro, Brazil, with a vibrant atmosphere and scenic views.",
+        "timezone": "America/Sao_Paulo"
       }
     ]
   }
-  
