@@ -3,6 +3,8 @@
       {
         "id": 1,
         "name": "Australia",
+        "imageUrl": "aus.jpg",
+        "description": "Australia is a vibrant tourist destination known for its stunning beaches, diverse wildlife, and breathtaking natural landscapes. From the iconic Great Barrier Reef to the rugged Outback, visitors can explore a variety of environments.",
         "timezone": "Australia/Sydney",
         "cities": [
           {
@@ -22,6 +24,8 @@
       {
         "id": 2,
         "name": "Japan",
+        "imageUrl": "japan.jpg",
+        "description": "Japan is a captivating destination that offers a unique blend of ancient traditions and modern living. It features a wide range of attractions, including historic temples and shrines, vibrant shopping districts, and stunning natural landscapes.",
         "timezone": "Asia/Tokyo",
         "cities": [
           {
@@ -41,6 +45,8 @@
       {
         "id": 3,
         "name": "Brazil",
+        "imageUrl": "brazil.jpg",
+        "description": "Brazil is a vibrant destination known for its stunning beaches, diverse culture, rich music scene, and historic architecture. ",
         "timezone": "America/Sao_Paulo",
         "cities": [
           {
